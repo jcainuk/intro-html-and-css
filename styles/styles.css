@@ -1,38 +1,95 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: lightpink;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Roboto+Serif:ital,wght@1,500&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100vh;
+  background-color: #59656f;
 }
 
-h1 {
-  font-size: 80px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande";
+header {
+  background-color: #d7cdcc;
+  border: 3px #1d1e2c solid;
+  border-radius: 5px;
 }
-p {
-  margin: 1rem;
-  padding: 1rem;
-}
-
-ul {
-  padding: 1rem;
-}
-
-ol {
-  color: blue;
-}
-
-img {
-  margin: 0 auto;
-  display: block;
-}
+aside,
+main,
 footer {
+  border: 3px #1d1e2c solid;
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 10px;
+}
+h1,
+h2,
+h3 {
   text-align: center;
 }
-
-a {
-  font-size: 1rem;
-  margin: 1rem;
+aside {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: #9c528b;
 }
+img {
+  max-width: 90%;
+  border-radius: 6px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px #1d1e2c solid;
+}
+footer {
+  background-color: #1d1e2c;
+  color: white;
+}
+
+footer a {
+  color: white;
+}
+
+@media (min-width: 40em) {
+  body {
+    grid-template-columns: 12em 1fr;
+    grid-template-rows: auto 1fr auto;
+  }
+  header {
+    grid-column: span 2;
+  }
+  aside {
+    grid-row: span 1;
+  }
+  footer {
+    grid-column: span 2;
+  }
+  img {
+    max-width: 90%;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-top: 50%;
+    padding-bottom: 50%;
+  }
+}
+/* 
+@media (min-width: 40em) {
+  body {
+    grid-template-areas:
+      "banner banner"
+      "nav main"
+      "nav footer";
+  }
+}
+
+header {
+  grid-area: banner;
+}
+nav {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+} */
